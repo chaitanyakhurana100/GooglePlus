@@ -9,7 +9,11 @@
 <body>
   <div id="googlePlusButton">
     <button class="g-signin"
-        data-scope="https://www.googleapis.com/auth/plus.login"
+        data-scope="https://www.googleapis.com/auth/plus.login
+                          https://www.googleapis.com/auth/plus.me
+                          https://www.googleapis.com/auth/userinfo.email
+                          https://www.googleapis.com/auth/userinfo.profile
+                          https://www.googleapis.com/auth/plus.profile.emails.read"
         data-requestvisibleactions="http://schemas.google.com/AddActivity"
         data-clientId="[REPLACE WITH YOUR CLIENT ID]"
         data-callback="onSignInCallback"
