@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google+ SignIn Sample Code</title>
+  <script src="https://apis.google.com/js/client:platform.js" async defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" ></script>
+  <script src="js/include.js" type="text/javascript"></script>
+</head>
+<body>
+  <div id="googlePlusButton">
+    <button class="g-signin"
+        data-scope="https://www.googleapis.com/auth/plus.login"
+        data-requestvisibleactions="http://schemas.google.com/AddActivity"
+        data-clientId="[REPLACE WITH YOUR CLIENT ID]"
+        data-callback="onSignInCallback"
+        data-theme="dark"
+        data-cookiepolicy="single_host_origin">
+    </button>
+  </div>
+  <div id="authOps" style="display:none">
+    <h2>User is now signed in to the app using Google+</h2>
+    <p>If the user chooses to disconnect, the app must delete all stored
+    information retrieved from Google for the given user.</p>
+    <button id="disconnect" >Disconnect your Google account from this app</button>
+
+    <h2>User's profile information</h2>
+    <div id="profile"></div>
+
+	<!--This will show the photos of all the users whom logged in user is connected with on Google+-->
+    <h2>User's friends that are visible to this app</h2>
+    <div id="visiblePeople"></div>
+	<!--Authentication Logs outputs an object which has different values. Example: access token generated at, expires at, scopes etc.-->
+    <h2>Authentication Logs</h2>
+    <pre id="authResult"></pre>
+  </div>
+  <!--This will be shown to the user if the Google+ button or include.js file is not loaded properly-->
+  <div id="loaderror">
+    This section will be hidden by JQuery. If you can see this message, you
+    may be viewing the file rather than running a web server.<br />
+    The sample must be run from http or https. See instructions at
+    <a href="https://developers.google.com/+/quickstart/javascript">
+    https://developers.google.com/+/quickstart/javascript</a>.
+  </div>
+</body>
+</html>
